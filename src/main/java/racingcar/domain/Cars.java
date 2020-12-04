@@ -1,9 +1,13 @@
 package racingcar.domain;
 
+import com.sun.xml.internal.org.jvnet.mimepull.MIMEConfig;
+
 import javax.management.ListenerNotFoundException;
 import java.util.ArrayList;
 
 public class Cars {
+    private static final int MIN_SIZE = 2;
+
     private ArrayList<Car> cars;
 
     private Cars(ArrayList<Car> cars) {
@@ -11,6 +15,10 @@ public class Cars {
     }
 
     public static Cars of(ArrayList<String> carNames){
+        if (carNames.size() < MIN_SIZE){
+            throw new IllegalArgumentException("최소 " + MIN_SIZE + "대 이상의 이름을 입력하세요.");
+        }
+
         ArrayList<Car> cars = new ArrayList<>();
         carNames.stream()
                 .map(Car::from)
