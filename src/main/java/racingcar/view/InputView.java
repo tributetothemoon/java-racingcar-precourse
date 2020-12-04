@@ -1,6 +1,4 @@
-package racingcar.View;
-
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+package racingcar.view;
 
 import java.util.ArrayList;
 import java.util.Arrays;
