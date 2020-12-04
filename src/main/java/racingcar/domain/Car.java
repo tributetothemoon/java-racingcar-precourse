@@ -11,7 +11,7 @@ public class Car {
     }
 
     // 추가 기능 구현
-    public static Car createCar(String name){
+    public static Car from(String name) {
         return new Car(name);
     }
 
@@ -35,7 +35,7 @@ public class Car {
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         return this.name.hashCode();
     }
 

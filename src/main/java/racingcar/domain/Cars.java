@@ -13,7 +13,7 @@ public class Cars {
     public static Cars of(ArrayList<String> carNames){
         ArrayList<Car> cars = new ArrayList<>();
         carNames.stream()
-                .map(Car::createCar)
+                .map(Car::from)
                 .filter( i -> isNotContainsOrThrowException(cars, i))
                 .forEach(cars::add);
         return new Cars(cars);
