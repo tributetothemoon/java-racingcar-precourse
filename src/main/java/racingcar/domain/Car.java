@@ -1,6 +1,6 @@
 package racingcar.domain;
 
-public class Car {
+public class Car implements Comparable<Car>{
     private static final int MAX = 5;
 
     private final String name;
@@ -12,6 +12,7 @@ public class Car {
 
     // 추가 기능 구현
     public static Car from(String name) {
+        isValidLengthOrThrowException(name);
         return new Car(name);
     }
 
@@ -39,4 +40,8 @@ public class Car {
         return this.name.hashCode();
     }
 
+    @Override
+    public int compareTo(Car o) {
+        return Integer.compare(this.position, o.position);
+    }
 }
