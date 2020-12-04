@@ -15,7 +15,7 @@ public class InputView {
     }
 
     public static ArrayList<String> getCarNames() {
-        ArrayList<String> carNames = new ArrayList<>();
+        ArrayList<String> carNames;
         System.out.println(REQUEST_CAR_NAMES_MESSAGE);
         String rawString = deleteWhiteSpaces(scanner.nextLine());
 
