@@ -1,7 +1,11 @@
 package racingcar.domain;
 
+import utils.RandomUtils;
+
 public class Car implements Comparable<Car>{
     private static final int MAX = 5;
+    private static final int MIN_SEED = 0;
+    private static final int MAX_SEED = 9;
 
     private final String name;
     private int position = 0;
@@ -21,6 +25,13 @@ public class Car implements Comparable<Car>{
             throw new IllegalArgumentException("이름의 길이는 " + MAX + "자를 넘어가서는 안 됩니다.");
         }
         return true;
+    }
+
+    void move() {
+        int randomNumber = RandomUtils.nextInt(MIN_SEED, MAX_SEED);
+        if (4 < randomNumber) {
+            this.position++;
+        }
     }
 
     @Override
