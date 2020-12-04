@@ -1,6 +1,7 @@
 package racingcar.controller;
 
 import racingcar.domain.Cars;
+import racingcar.view.OutputView;
 
 public class RaicingCarGame {
     private final Cars cars;
@@ -13,10 +14,11 @@ public class RaicingCarGame {
     }
 
     public void play() {
+        OutputView.printResultMessage();
         while (!isEnd()) {
             // Play Logic
             cars.moveCars();
-
+            OutputView.showCarsPosition(this.cars.exportAsDTO());
             nextTurn();
         }
     }

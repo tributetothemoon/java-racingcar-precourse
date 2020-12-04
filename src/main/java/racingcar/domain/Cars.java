@@ -1,6 +1,7 @@
 package racingcar.domain;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Cars {
     private static final int MIN_SIZE = 2;
@@ -33,6 +34,12 @@ public class Cars {
 
     public void moveCars() {
         cars.forEach(car -> car.move());
+    }
+
+    public ArrayList<CarDTO> exportAsDTO() {
+        return this.cars.stream()
+                .map( car -> new CarDTO(car.getName(), car.getPosition()))
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
