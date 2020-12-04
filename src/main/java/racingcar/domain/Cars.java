@@ -1,8 +1,5 @@
 package racingcar.domain;
 
-import com.sun.xml.internal.org.jvnet.mimepull.MIMEConfig;
-
-import javax.management.ListenerNotFoundException;
 import java.util.ArrayList;
 
 public class Cars {
@@ -32,6 +29,10 @@ public class Cars {
             throw new IllegalArgumentException("자동차 이름이 중복됩니다.");
         }
         return true;
+    }
+
+    public void moveCars() {
+        cars.forEach(car -> car.move());
     }
 
     @Override

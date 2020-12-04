@@ -15,13 +15,14 @@ public class RaicingCarGame {
     public void play() {
         while (!isEnd()) {
             // Play Logic
+            cars.moveCars();
 
             nextTurn();
         }
     }
 
     public boolean isEnd() {
-        return currentTurn < endTurn;
+        return !(currentTurn < endTurn);
     }
 
     public void nextTurn() {
