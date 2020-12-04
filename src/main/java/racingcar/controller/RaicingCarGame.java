@@ -22,6 +22,7 @@ public class RaicingCarGame {
             OutputView.showCarsPosition(this.cars.exportAsDTO());
             nextTurn();
         }
+        OutputView.showWinners(Ranking.from(cars).getWinner());
     }
 
     public boolean isEnd() {

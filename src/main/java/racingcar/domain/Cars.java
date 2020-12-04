@@ -44,7 +44,7 @@ public class Cars {
     }
 
     public List<Car> toList() {
-        return (List<Car>) cars;
+        return cars;
     }
 
     @Override

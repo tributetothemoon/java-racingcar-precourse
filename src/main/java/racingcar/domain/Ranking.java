@@ -22,7 +22,7 @@ public class Ranking {
         ArrayList<String> winners = new ArrayList<>();
         Car temporalWinner = ranking.poll();
         winners.add(temporalWinner.getName());
-        while(ranking.peek().getPosition() == temporalWinner.getPosition()) {
+        while(!ranking.isEmpty() && ranking.peek().getPosition() == temporalWinner.getPosition()) {
             winners.add(ranking.poll().getName());
         }
         return winners;
