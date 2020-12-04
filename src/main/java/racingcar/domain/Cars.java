@@ -1,6 +1,7 @@
 package racingcar.domain;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class Cars {
@@ -40,6 +41,10 @@ public class Cars {
         return this.cars.stream()
                 .map( car -> new CarDTO(car.getName(), car.getPosition()))
                 .collect(Collectors.toCollection(ArrayList::new));
+    }
+
+    public List<Car> toList() {
+        return (List<Car>) cars;
     }
 
     @Override

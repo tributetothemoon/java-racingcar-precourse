@@ -28,4 +28,5 @@ public class OutputView {
     public static void printResultMessage() {
         System.out.println(EXECUTION_RESULT);
     }
+
 }

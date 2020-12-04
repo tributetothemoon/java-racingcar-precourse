@@ -1,6 +1,7 @@
 package racingcar.controller;
 
 import racingcar.domain.Cars;
+import racingcar.domain.Ranking;
 import racingcar.view.OutputView;
 
 public class RaicingCarGame {

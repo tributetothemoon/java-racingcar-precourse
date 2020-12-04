@@ -22,7 +22,7 @@ State 2: 게임 중
 ### 필요 객체
 - [x] Car : 기본 제공, 필요 메소드를 구현한다.
 - [x] Cars : 자동차들을 담을 일급 컬렉션 
-- [ ] Ranking : 자동차들의 순위를 담는다.
+- [x] Ranking : 자동차들의 순위를 담는다.
 - [x] RacingCarGame : 게임의 로직을 담당한다.
 - [x] OutputView : 출력을 담당할 객체
 - [x] InputView : 입력을 담당할 객체
