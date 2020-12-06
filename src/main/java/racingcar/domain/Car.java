@@ -2,7 +2,7 @@ package racingcar.domain;
 
 import utils.RandomUtils;
 
-public class Car implements Comparable<Car>{
+public class Car implements Comparable<Car> {
     private static final int MAX = 5;
     private static final int MIN_SEED = 0;
     private static final int MAX_SEED = 9;

@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class Cars {
     private static final int MIN_SIZE = 2;
 
-    private ArrayList<Car> cars;
+    private final ArrayList<Car> cars;
 
     private Cars(ArrayList<Car> cars) {
         this.cars = cars;
@@ -34,7 +34,7 @@ public class Cars {
     }
 
     public void moveCars() {
-        cars.forEach(car -> car.move());
+        cars.forEach(Car::move);
     }
 
     public ArrayList<CarDTO> exportAsDTO() {
